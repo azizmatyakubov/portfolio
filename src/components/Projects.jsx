@@ -4,7 +4,7 @@ import Project from './Project'
 const Projects = () => {
   return (
     <div
-      name="projects"
+      name="Projects"
       className="w-full md:h-screen text-gray-300 bg-[#0a192f]"
     >
       {/* Container  */}
@@ -13,7 +13,7 @@ const Projects = () => {
           <p className="text-4xl font-bold inline border-b-4 border-pink-600">
             Projects
           </p>
-          <p className="py-6">// Check out some of my recent projects</p>
+          <p className="py-6">Check out some of my recent projects</p>
         </div>
 
         {/* Container  */}

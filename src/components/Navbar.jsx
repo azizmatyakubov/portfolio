@@ -4,6 +4,7 @@ import { HiOutlineMail } from 'react-icons/hi'
 import { BsFillPersonLinesFill } from 'react-icons/bs'
 import Logo from '../assets/logo1.png'
 import { Link } from 'react-scroll'
+import NavItem from './NavItem'
 
 const Navbar = () => {
   const [nav, setNav] = useState(false)
@@ -18,32 +19,26 @@ const Navbar = () => {
 
       <ul className="hidden md:flex">
         <li>
-          <Link to="home" smooth={true} offset={50} duration={500}>
-            Home
-          </Link>
+          <NavItem text="Home" />
         </li>
         <li>
-          <Link to="about" smooth={true} offset={50} duration={500}>
-            About
-          </Link>
+          <NavItem text="About" />
         </li>
         <li>
-          <Link to="projects" smooth={true} offset={50} duration={500}>
-            Projects
-          </Link>
+          <NavItem text="Projects" />
         </li>
         <li>Experience</li>
-        <li>Skills</li>
         <li>
-          <Link to="contact" smooth={true} offset={50} duration={500}>
-            Contact
-          </Link>
+          <NavItem text="Skills" />
+        </li>
+        <li>
+          <NavItem text="Contact" />
         </li>
       </ul>
 
       {/* Hamburger menu */}
       <div onClick={handleClick} className="md:hidden z-10">
-        {nav ? <FaBars /> : <FaTimes />}
+        {nav ? <FaTimes /> : <FaBars />}
       </div>
 
       {/* Mobile menu  */}
@@ -54,12 +49,22 @@ const Navbar = () => {
             : 'hidden'
         }
       >
-        <li className="py-6 text-4xl">Home</li>
-        <li className="py-6 text-4xl">About</li>
-        <li className="py-6 text-4xl">Projects</li>
+        <li className="py-6 text-4xl">
+          <NavItem handleClick={handleClick} text="Home" />
+        </li>
+        <li className="py-6 text-4xl">
+          <NavItem handleClick={handleClick} text="About" />
+        </li>
+        <li className="py-6 text-4xl">
+          <NavItem handleClick={handleClick} text="Projects" />
+        </li>
         <li className="py-6 text-4xl">Experience</li>
-        <li className="py-6 text-4xl">Skills</li>
-        <li className="py-6 text-4xl">Contact</li>
+        <li className="py-6 text-4xl">
+          <NavItem handleClick={handleClick} text="Skills" />
+        </li>
+        <li className="py-6 text-4xl">
+          <NavItem handleClick={handleClick} text="Contact" />
+        </li>
       </ul>
 
       {/* Social icons */}
