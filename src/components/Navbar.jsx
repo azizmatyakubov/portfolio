@@ -2,8 +2,8 @@ import { useState } from 'react'
 import { FaBars, FaTimes, FaGithub, FaLinkedin } from 'react-icons/fa'
 import { HiOutlineMail } from 'react-icons/hi'
 import { BsFillPersonLinesFill } from 'react-icons/bs'
-
 import Logo from '../assets/logo1.png'
+import { Link } from 'react-scroll'
 
 const Navbar = () => {
   const [nav, setNav] = useState(false)
@@ -17,12 +17,28 @@ const Navbar = () => {
       {/* menu  */}
 
       <ul className="hidden md:flex">
-        <li>Home</li>
-        <li>About</li>
-        <li>Projects</li>
+        <li>
+          <Link to="home" smooth={true} offset={50} duration={500}>
+            Home
+          </Link>
+        </li>
+        <li>
+          <Link to="about" smooth={true} offset={50} duration={500}>
+            About
+          </Link>
+        </li>
+        <li>
+          <Link to="projects" smooth={true} offset={50} duration={500}>
+            Projects
+          </Link>
+        </li>
         <li>Experience</li>
         <li>Skills</li>
-        <li>Contact</li>
+        <li>
+          <Link to="contact" smooth={true} offset={50} duration={500}>
+            Contact
+          </Link>
+        </li>
       </ul>
 
       {/* Hamburger menu */}

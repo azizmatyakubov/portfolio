@@ -2,10 +2,11 @@ import React from 'react'
 import Project from './Project'
 
 const Projects = () => {
-  let img =
-    'http://feldmancreative.com/wp-content/uploads/2017/10/Yotpo-hero-shot.png'
   return (
-    <div className="w-full md:h-screen text-gray-300 bg-[#0a192f]">
+    <div
+      name="projects"
+      className="w-full md:h-screen text-gray-300 bg-[#0a192f]"
+    >
       {/* Container  */}
       <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
         <div className="pb-8">
